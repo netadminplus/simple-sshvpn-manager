@@ -1,12 +1,12 @@
 #!/bin/bash
 
 PANEL_VERSION="2.0"
-PANEL_NAME="NetAdminPlus SSH VPN Manager"
+PANEL_NAME="NetAdminPlus SSH Manager"
 MAIN_TITLE="$PANEL_NAME v$PANEL_VERSION"
 CREATOR_INFO="Created with ❤️ by Ramtin"
 YOUTUBE_CHANNEL="https://YouTube.com/NetAdminPlus"
 GITHUB_REPO="netadminplus/simple-sshvpn-manager"
-INSTALL_DIR="netadminplus-ssh-manager"
+INSTALL_DIR="simple-sshvpn-manager"
 CONFIG_SUBDIR="config"
 LOG_DIRECTORY="/var/log/netadminplus-ssh"
 
@@ -50,8 +50,8 @@ download_and_extract() {
     fi
     
     sudo rm -rf "$INSTALL_DIR"/*
-    sudo mv netadminplus-ssh-manager-main/* "$INSTALL_DIR/"
-    sudo rm -rf netadminplus-ssh-manager-main
+    sudo mv simple-sshvpn-manager-main/* "$INSTALL_DIR/"
+    sudo rm -rf simple-sshvpn-manager-main
     sudo rm -f netadmin-archive.zip
     
     echo "Files extracted successfully!"
@@ -103,7 +103,7 @@ setup_monitoring_cron() {
 
 complete_installation() {
     cd ..
-    sudo rm -f netadmin-installer.sh
+    sudo rm -f ssh-installer.sh
     
     echo ""
     echo "=================================================="
