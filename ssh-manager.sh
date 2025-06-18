@@ -474,6 +474,8 @@ main_menu_loop() {
                 clear
                 echo ""
                 echo "╔════════════════════════════════════════════════════════════════════════════════╗"
+                echo "║                    Thank you for using NetAdminPlus SSH VPN Manager!         ║"
+                echo "║                                                                                ║"
                 echo "║                         Created with ❤️  by Ramtin                            ║"
                 echo "║                       https://YouTube.com/NetAdminPlus                        ║"
                 echo "╚════════════════════════════════════════════════════════════════════════════════╝"
