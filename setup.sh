@@ -1,9 +1,9 @@
 #!/bin/bash
 
 PANEL_VERSION="2.0"
-PANEL_NAME="NetAdminPlus SSH Manager"
+PANEL_NAME="NetAdminPlus SSH VPN Manager"
 MAIN_TITLE="$PANEL_NAME v$PANEL_VERSION"
-CREATOR_INFO="Created with ❤️ by Ramtin"
+CREATOR_INFO="Created with ❤️  by Ramtin"
 YOUTUBE_CHANNEL="https://YouTube.com/NetAdminPlus"
 GITHUB_REPO="netadminplus/simple-sshvpn-manager"
 INSTALL_DIR="simple-sshvpn-manager"
@@ -33,7 +33,7 @@ update_system_packages() {
 }
 
 download_and_extract() {
-    echo "Downloading NetAdminPlus SSH Manager..."
+    echo "Downloading NetAdminPlus SSH VPN Manager..."
     
     sudo rm -f netadmin-archive.zip
     wget -O netadmin-archive.zip "https://github.com/$GITHUB_REPO/archive/main.zip" > /dev/null 2>&1
@@ -154,7 +154,7 @@ show_upgrade_menu() {
     local user_choice
     user_choice=$(dialog --clear --backtitle "$MAIN_TITLE" \
         --title "Existing Installation Detected" \
-        --menu "\n$CREATOR_INFO\n$YOUTUBE_CHANNEL\n\nChoose an action:" 18 70 5 \
+        --menu "\n$CREATOR_INFO\n$YOUTUBE_CHANNEL\n\nChoose an action:" 20 80 6 \
             1 "Upgrade to Latest Version" \
             2 "Remove Installation Only" \
             3 "Remove Installation + Data" \
@@ -176,7 +176,7 @@ show_upgrade_menu() {
             local confirmation
             confirmation=$(dialog --clear --backtitle "$MAIN_TITLE" \
                 --title "Confirm Complete Removal" \
-                --inputbox "Type 'REMOVE-ALL' to confirm complete removal:" 10 60 2>&1 >/dev/tty)
+                --inputbox "Type 'REMOVE-ALL' to confirm complete removal:" 12 70 2>&1 >/dev/tty)
 
             clear
             if [ "$confirmation" = "REMOVE-ALL" ]; then
