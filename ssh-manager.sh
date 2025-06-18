@@ -115,6 +115,8 @@ install_bbr() {
             --msgbox "\n\Z1BBR installation cancelled.\Zn" 10 55
     fi
 }
+
+get_current_ssh_port() {
     local current_port
     current_port=$(sudo grep -E "^Port " /etc/ssh/sshd_config 2>/dev/null | awk '{print $2}')
     if [ -z "$current_port" ]; then
